@@ -1,0 +1,19 @@
+{
+	"name": "botshackathon/php",
+	"type": "template",
+	"require": {},
+	"autoload": {
+        "psr-4": {
+            "Facebook\\": "facebook/",
+            "Telegram\\": "telegram/",
+            "Database\\": "database/",
+			"Entities\\": "entities/"
+        },
+		"files": [
+			"helper/helper.php"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	}
+}
