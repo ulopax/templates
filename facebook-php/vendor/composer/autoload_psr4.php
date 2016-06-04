@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Telegram\\' => array($baseDir . '/telegram'),
     'Facebook\\' => array($baseDir . '/facebook'),
     'Entities\\' => array($baseDir . '/entities'),
+    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Database\\' => array($baseDir . '/database'),
 );

@@ -1,16 +1,18 @@
 {
 	"name": "botshackathon/php",
 	"type": "template",
-	"require": {},
+	"require": {
+		"vlucas/phpdotenv": "v2.2.1"
+	},
 	"autoload": {
         "psr-4": {
             "Facebook\\": "facebook/",
-            "Telegram\\": "telegram/",
             "Database\\": "database/",
 			"Entities\\": "entities/"
         },
 		"files": [
-			"helper/helper.php"
+			"helper/helper.php",
+			"MessageHandler.php"
 		]
 	},
 	"config": {

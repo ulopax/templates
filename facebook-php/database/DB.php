@@ -65,7 +65,6 @@ class DB
         });
         $fields = implode(',', $fields);
         $sql = "UPDATE $table SET $fields, updated_at = CURRENT_TIMESTAMP WHERE id = :id";
-        logger($sql);
         $stmt = $this->conn->prepare($sql);
         foreach($values as $k=>$v) {
             $stmt->bindParam(":$k", $values[$k]);

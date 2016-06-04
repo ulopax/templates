@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '928cf3ea9fc85f460954566456820dc6' => $baseDir . '/helper/helper.php',
+    '0251facf3ed5784bed8354d442b5bcc2' => $baseDir . '/MessageHandler.php',
 );
