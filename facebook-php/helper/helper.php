@@ -2,6 +2,8 @@
 
 use Database\UserDAO;
 use Facebook\FacebookAPI;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 function logger($data)
 {
@@ -44,7 +46,7 @@ function get_messages($input)
 
 function wanted($msg)
 {
-    if (array_key_exists('delivery', $msg)) {
+    if (array_key_exists('delivery', $msg) || array_key_exists('read', $msg)) {
         return false;
     }
 
@@ -79,18 +81,6 @@ function get_cmd($payload) {
     return $cmd;
 }
 
-function send_text($user, $text)
-{
-    $fb = new FacebookAPI();
-    $fb->sendText($user, $text);
-}
-
-function send_image($user, $url)
-{
-    $fb = new FacebookAPI();
-    $fb->sendImage($user, $url);
-}
-
 function update_user($user)
 {
     $dao = new UserDAO();
@@ -108,8 +98,4 @@ function verify($request)
         http_response_code(400);
     }
     exit(0);
-}
-
-if (array_key_exists('hub_verify_token', get_input())) {
-    verify(get_input());
 }
