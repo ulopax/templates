@@ -9,10 +9,10 @@ class DB
     public function __construct()
     {
         $servername = '127.0.0.1';
-        $username = 'homestead';
-        $password = 'secret';
-        $dbname = 'botshack';
-        $port = '33060';
+        $username = getenv('USERNAME');
+        $password = getenv('PASSWORD');
+        $dbname = getenv('USERNAME');
+        $port = '3306';
 
         try {
             $this->conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);

@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `meta` text NOT NULL,
   `language` varchar(255) NOT NULL DEFAULT 'en',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=30 ;
+  `updated_at` timestamp NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 --
 -- Indexes for dumped tables
