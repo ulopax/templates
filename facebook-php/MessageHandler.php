@@ -36,7 +36,7 @@ class MessageHandler
     {
         $messenger = new Messenger(getenv('FACEBOOK_TOKEN'));
 
-        $image = new Image('https://rainbowgram.files.wordpress.com/2014/12/b542b-10852747_1518935621724535_1634917026_n.jpg?w=640');
+        $image = new Image('https://rainbowgram.files.wordpress.com/2014/12/b542b-10852747_1518935621724535_1634917026_n.jpg');
         $message = new Message($user->chat, $image);
         $messenger->sendMessage($message);
     }
