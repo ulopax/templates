@@ -23,6 +23,9 @@ class MessageHandler
         $messenger = new Messenger(getenv('FACEBOOK_TOKEN'));
         $message = new Message($user->chat, $cmd);
         $messenger->sendMessage($message);
+
+        $message = new Message($user->chat, 'ok');
+        $messenger->sendMessage($message);
     }
 
     /**

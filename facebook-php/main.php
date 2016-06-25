@@ -45,7 +45,8 @@ $msgs = get_messages($input);
 
 foreach ($msgs as $m) {
     if (wanted($m)) {
-        if(array_key_exists('text', $m['message'])) {
+        if((array_key_exists('message', $m) && array_key_exists('text', $m['message']))
+         || (array_key_exists('postback', $m) &&  array_key_exists('payload', $m['postback']))) {
             MessageHandler::processMessage(get_cmd($m), get_user($m));
         }
         if(array_key_exists('attachments', $m['message'])) {
