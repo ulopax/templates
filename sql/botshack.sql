@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `updated_at` timestamp NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
+
 --
 -- Indexes for dumped tables
 --
